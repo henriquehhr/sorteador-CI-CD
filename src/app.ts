@@ -1,6 +1,7 @@
 import express, { json, Request, Response } from "express";
 import prisma from "./database.js";
 
+
 const app = express();
 app.use(json());
 
@@ -18,6 +19,7 @@ app.post("/students", async (req: Request, res: Response) => {
 
   res.sendStatus(201); // created
 });
+
 
 app.get("/students/random", async (req: Request, res: Response) => {
   const students = await prisma.student.findMany();
