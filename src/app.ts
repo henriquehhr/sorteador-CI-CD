@@ -19,6 +19,7 @@ app.post("/students", async (req: Request, res: Response) => {
   res.sendStatus(201); // created
 });
 
+
 app.get("/students/random", async (req: Request, res: Response) => {
   const students = await prisma.student.findMany();
   if (students.length > 0) {
