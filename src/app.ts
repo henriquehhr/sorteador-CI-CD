@@ -1,6 +1,7 @@
 import express, { json, Request, Response } from "express";
 import prisma from "./database.js";
 
+
 const app = express();
 app.use(json());
 
